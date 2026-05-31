@@ -46,10 +46,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="what-are-websocket-apis">What Are WebSocket APIs?</h2>
+  <hr />
+   <h2 id="what-are-websocket-apis">What Are WebSocket APIs?</h2>
 <blockquote>
 <p>WebSocket APIs enable bi-directional, full-duplex communication between a client
 and a server over a single persistent connection.</p>
@@ -185,7 +183,36 @@ other&rsquo;s state at all times without any intermediary polling.</p>
 <p><em>Previous: <a href="/courses/iot/posts/ch1-part4-proxy-servers">Chapter 1, Part 4 – Proxy Servers</a></em>
 <em>Next: <a href="/courses/iot/posts/ch1-part6-iot-system-components">Chapter 1, Part 6 – IoT System Components</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch1/">Chapter 1: IoT APIs &amp; Deployment Levels</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part6-iot-system-components/" id="nav-prev">← Chapter 1, Part 6 – IoT System Components &amp; Deployment Levels</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part4-proxy-servers/" id="nav-next">Chapter 1, Part 4 – Proxy Servers →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

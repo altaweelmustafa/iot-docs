@@ -24,37 +24,15 @@
 
 
 <hr>
-<div class="sort-bar">
-  <span>Sort by:</span>
-  <button onclick="sortPosts('date-desc')">Date ↓</button>
-  <button onclick="sortPosts('date-asc')">Date ↑</button>
-  <button onclick="sortPosts('name-asc')">Name A–Z</button>
-  <button onclick="sortPosts('name-desc')">Name Z–A</button>
-</div>
 <div id="post-list">
   
-  <div class="post-entry"
-    data-date="2026-05-31"
-    data-title="chapter 2, part 2 – scheduling">
+  <div class="post-entry">
     <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part2-scheduling/">Chapter 2, Part 2 – Scheduling</a>
     <span class="post-date">— 2026 May 31</span>
     <p class="post-desc">How poor task scheduling wastes energy in IoT networks.</p>
   </div>
   
 </div>
-<script>
-function sortPosts(method) {
-  const list = document.getElementById('post-list');
-  const posts = Array.from(list.querySelectorAll('.post-entry'));
-  posts.sort((a, b) => {
-    if (method === 'date-desc') return b.dataset.date.localeCompare(a.dataset.date);
-    if (method === 'date-asc')  return a.dataset.date.localeCompare(b.dataset.date);
-    if (method === 'name-asc')  return a.dataset.title.localeCompare(b.dataset.title);
-    if (method === 'name-desc') return b.dataset.title.localeCompare(a.dataset.title);
-  });
-  posts.forEach(p => list.appendChild(p));
-}
-</script>
 
 
 

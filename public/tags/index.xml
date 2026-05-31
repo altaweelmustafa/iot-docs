@@ -58,6 +58,13 @@
       <description></description>
     </item>
     <item>
+      <title>Coordinator</title>
+      <link>http://localhost:1313/docs/tags/coordinator/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/coordinator/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Deployment</title>
       <link>http://localhost:1313/docs/tags/deployment/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
@@ -83,6 +90,13 @@
       <link>http://localhost:1313/docs/tags/home-automation/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tags/home-automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Http</title>
+      <link>http://localhost:1313/docs/tags/http/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/http/</guid>
       <description></description>
     </item>
     <item>
@@ -118,6 +132,13 @@
       <link>http://localhost:1313/docs/tags/level4/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tags/level4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Level5</title>
+      <link>http://localhost:1313/docs/tags/level5/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/level5/</guid>
       <description></description>
     </item>
     <item>
@@ -184,6 +205,13 @@
       <description></description>
     </item>
     <item>
+      <title>Real-Time</title>
+      <link>http://localhost:1313/docs/tags/real-time/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/real-time/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Rest</title>
       <link>http://localhost:1313/docs/tags/rest/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
@@ -209,6 +237,20 @@
       <link>http://localhost:1313/docs/tags/scheduling/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/tags/scheduling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Websocket</title>
+      <link>http://localhost:1313/docs/tags/websocket/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/websocket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsn</title>
+      <link>http://localhost:1313/docs/tags/wsn/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/wsn/</guid>
       <description></description>
     </item>
   </channel>

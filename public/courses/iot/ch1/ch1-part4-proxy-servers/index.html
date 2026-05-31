@@ -39,10 +39,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="what-is-a-proxy-server">What Is a Proxy Server?</h2>
+  <hr />
+   <h2 id="what-is-a-proxy-server">What Is a Proxy Server?</h2>
 <blockquote>
 <p>A proxy server is an intermediary server that acts as a gateway between clients
 (such as web browsers or applications) and destination servers (such as web
@@ -84,7 +82,36 @@ same proxy path, significantly reducing origin server load at scale.</p>
 <p><em>Previous: <a href="/courses/iot/ch1/ch1-part3-rest-caching">Chapter 1, Part 3 – REST Caching</a></em>
 <em>Next: <a href="/courses/iot/ch1/ch1-part5-websocket-api">Chapter 1, Part 5 – WebSocket APIs</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch1/">Chapter 1: IoT APIs &amp; Deployment Levels</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part5-websocket-api/" id="nav-prev">← Chapter 1, Part 5 – WebSocket APIs &amp; Exclusive Pair</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part3-rest-caching/" id="nav-next">Chapter 1, Part 3 – REST Caching →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

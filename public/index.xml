@@ -16,6 +16,13 @@
       <description>&lt;h2 id=&#34;what-is-an-iot-api&#34;&gt;What Is an IoT API?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;An IoT API (Application Programming Interface) is a standardized communication&#xA;bridge between IoT devices and the external applications or systems that interact&#xA;with them.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Instead of every smart home app needing to understand each manufacturer&amp;rsquo;s&#xA;proprietary protocol, an API provides a unified interface. A single application can&#xA;control thermostats, lights, door locks, and security cameras from different vendors&#xA;because the API abstracts the underlying hardware differences away.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Chapter 1, Part 2 – REST APIs</title>
+      <link>http://localhost:1313/docs/courses/iot/ch1/ch1-part2-rest-api/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/courses/iot/ch1/ch1-part2-rest-api/</guid>
+      <description>&lt;h2 id=&#34;what-is-rest&#34;&gt;What Is REST?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;REST (Representational State Transfer) is a set of architectural principles for&#xA;designing web services that focus on a system&amp;rsquo;s resources and how their states&#xA;are addressed and transferred.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;REST APIs follow the &lt;strong&gt;request-response&lt;/strong&gt; communication model. An HTTP client sends&#xA;a request; the server processes it and sends back a response. The REST constraints&#xA;apply to all components, connectors, and data elements within a distributed&#xA;hypermedia system.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;IoT example:&lt;/strong&gt; A temperature sensor periodically sends readings to a cloud server&#xA;by making HTTP POST requests to a RESTful API endpoint.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Chapter 1, Part 3 – REST Caching</title>
       <link>http://localhost:1313/docs/courses/iot/ch1/ch1-part3-rest-caching/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
@@ -30,11 +37,11 @@
       <description>&lt;h2 id=&#34;what-is-a-proxy-server&#34;&gt;What Is a Proxy Server?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A proxy server is an intermediary server that acts as a gateway between clients&#xA;(such as web browsers or applications) and destination servers (such as web&#xA;servers or internet resources).&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;When a client sends a request to access a resource, the request is first routed&#xA;through the proxy server rather than going directly to the destination. The proxy&#xA;then forwards the request on the client&amp;rsquo;s behalf and returns the response.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Chapter 1, Part 4 – Proxy Servers</title>
+      <title>Chapter 1, Part 5 – WebSocket APIs &amp; Exclusive Pair</title>
       <link>http://localhost:1313/docs/courses/iot/ch1/ch1-part5-websocket-api/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/courses/iot/ch1/ch1-part5-websocket-api/</guid>
-      <description>&lt;h2 id=&#34;what-is-a-proxy-server&#34;&gt;What Is a Proxy Server?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A proxy server is an intermediary server that acts as a gateway between clients&#xA;(such as web browsers or applications) and destination servers (such as web&#xA;servers or internet resources).&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;When a client sends a request to access a resource, the request is first routed&#xA;through the proxy server rather than going directly to the destination. The proxy&#xA;then forwards the request on the client&amp;rsquo;s behalf and returns the response.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;what-are-websocket-apis&#34;&gt;What Are WebSocket APIs?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;WebSocket APIs enable bi-directional, full-duplex communication between a client&#xA;and a server over a single persistent connection.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Unlike REST, where the client always initiates a request and waits for a response,&#xA;WebSocket allows both sides to send messages to each other at any time after the&#xA;connection is established.&lt;/p&gt;&#xA;&lt;p&gt;WebSocket APIs follow the &lt;strong&gt;Exclusive Pair&lt;/strong&gt; communication model.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;why-websocket-for-iot&#34;&gt;Why WebSocket for IoT?&lt;/h2&gt;&#xA;&lt;p&gt;WebSocket is the standard choice for IoT scenarios requiring real-time data&#xA;exchange:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 1, Part 6 – IoT System Components &amp; Deployment Levels</title>
@@ -72,11 +79,11 @@
       <description>&lt;h2 id=&#34;what-is-iot-level-4&#34;&gt;What Is IoT Level-4?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A Level-4 IoT system has &lt;strong&gt;multiple nodes&lt;/strong&gt; that each perform local analysis.&#xA;Data is stored in the cloud. The application is cloud-based. It includes both&#xA;local and cloud-based &lt;strong&gt;observer nodes&lt;/strong&gt; that can subscribe to and receive data&#xA;collected in the cloud from IoT devices.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The jump from Level-3 to Level-4 is: &lt;strong&gt;multiple nodes&lt;/strong&gt; plus &lt;strong&gt;observer nodes&lt;/strong&gt;&#xA;that subscribe to cloud data for additional processing, visualization, or&#xA;alerting.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Chapter 1, Part 12 – IoT Level-6</title>
+      <title>Chapter 1, Part 11 – IoT Level-5</title>
       <link>http://localhost:1313/docs/courses/iot/ch1/ch1-part11-iot-level5/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/courses/iot/ch1/ch1-part11-iot-level5/</guid>
-      <description>&lt;h2 id=&#34;what-is-iot-level-6&#34;&gt;What Is IoT Level-6?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A Level-6 IoT system has &lt;strong&gt;multiple independent end nodes&lt;/strong&gt; that each perform&#xA;sensing and/or actuation and send data directly to the cloud. A &lt;strong&gt;centralized&#xA;controller&lt;/strong&gt; in the cloud is aware of the status of all end nodes and sends&#xA;control commands back to them. The analytics component analyzes data and stores&#xA;results in the cloud database. Results are visualized through the cloud&#xA;application.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Level-6 is the most complete IoT deployment model. There is no coordinator node&#xA;aggregating data locally — each node is independent and communicates directly with&#xA;the cloud. Intelligence is fully centralized in the cloud controller.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;what-is-iot-level-5&#34;&gt;What Is IoT Level-5?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A Level-5 IoT system has &lt;strong&gt;multiple end nodes&lt;/strong&gt; and &lt;strong&gt;one coordinator node&lt;/strong&gt;.&#xA;End nodes perform sensing and/or actuation. The coordinator node collects data&#xA;from the end nodes and forwards it to the cloud. Data is stored and analyzed in&#xA;the cloud, and the application is cloud-based.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Level-5 is the standard &lt;strong&gt;Wireless Sensor Network (WSN)&lt;/strong&gt; deployment template.&#xA;Rather than each node communicating independently with the cloud, all end nodes&#xA;report to a single coordinator that handles the upward data transmission.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 1, Part 12 – IoT Level-6</title>
@@ -84,6 +91,13 @@
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/courses/iot/ch1/ch1-part12-iot-level6/</guid>
       <description>&lt;h2 id=&#34;what-is-iot-level-6&#34;&gt;What Is IoT Level-6?&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;A Level-6 IoT system has &lt;strong&gt;multiple independent end nodes&lt;/strong&gt; that each perform&#xA;sensing and/or actuation and send data directly to the cloud. A &lt;strong&gt;centralized&#xA;controller&lt;/strong&gt; in the cloud is aware of the status of all end nodes and sends&#xA;control commands back to them. The analytics component analyzes data and stores&#xA;results in the cloud database. Results are visualized through the cloud&#xA;application.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Level-6 is the most complete IoT deployment model. There is no coordinator node&#xA;aggregating data locally — each node is independent and communicates directly with&#xA;the cloud. Intelligence is fully centralized in the cloud controller.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/docs/about/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/about/</guid>
+      <description>&lt;h4 id=&#34;we-are&#34;&gt;We are:&lt;/h4&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/altaweelmustafa&#34;&gt;&lt;strong&gt;Mustafa Altaweel&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/kaliSamaa&#34;&gt;&lt;strong&gt;Samaa Kali&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Two students going through the same courses, dealing with the same shi*, and&#xA;deciding to do something it.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-this&#34;&gt;What is this?&lt;/h2&gt;&#xA;&lt;p&gt;This is a shared documentation site built and maintained by two computer science&#xA;students at Birzeit University. It started as a place to turn lecture&#xA;slides into readable, searchable notes; and grew into something more.&lt;/p&gt;&#xA;&lt;p&gt;Everything here is written by hand, converted from real course material, and&#xA;organized to actually make sense.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter 2, Part 1 – Energy Waste in IoT</title>
@@ -126,13 +140,6 @@
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/courses/iot/ch2/ch2-part6-ai-rpl/</guid>
       <description>&lt;h2 id=&#34;the-limitation-of-traditional-rpl&#34;&gt;The Limitation of Traditional RPL&lt;/h2&gt;&#xA;&lt;p&gt;Traditional RPL selects parents using a fixed Objective Function with static weights:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cost = W1*(Delay) + W2*(ETX) + W3*(Energy)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The weights are set at design time and never change. The network is static by&#xA;assumption. But real IoT networks are not static — traffic patterns shift, nodes&#xA;drain their batteries, links degrade, and topology changes. Fixed weights cannot&#xA;adapt to any of this.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI makes RPL adaptive instead of static.&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/docs/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/about/</guid>
-      <description>&lt;h4 id=&#34;we-are&#34;&gt;We are:&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Mustafa Altaweel&lt;/strong&gt; — &lt;a href=&#34;https://github.com/altaweelmustafa&#34;&gt;github.com/altaweelmustafa&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Samaa Kali&lt;/strong&gt; — &lt;a href=&#34;https://github.com/KaliSamaa&#34;&gt;github.com/KaliSamaa&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Two students going through the same courses, dealing with the same shi*, and&#xA;deciding to do something it.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-this&#34;&gt;What is this?&lt;/h2&gt;&#xA;&lt;p&gt;This is a shared documentation site built and maintained by two computer science&#xA;students at Birzeit University. It started as a place to turn lecture&#xA;slides into readable, searchable notes; and grew into something more.&lt;/p&gt;&#xA;&lt;p&gt;Everything here is written by hand, converted from real course material, and&#xA;organized to actually make sense.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

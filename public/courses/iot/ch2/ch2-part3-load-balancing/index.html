@@ -33,10 +33,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="what-is-load-balancing">What Is Load Balancing?</h2>
+  <hr />
+   <h2 id="what-is-load-balancing">What Is Load Balancing?</h2>
 <p><strong>Load balancing</strong> is the practice of distributing processing and communication
 tasks fairly among IoT, edge, fog, or cloud nodes so that no single node becomes
 a bottleneck.</p>
@@ -82,7 +80,36 @@ burden.</p>
 <p><em>Previous: <a href="/content/courses/iot/posts/ch2/ch2-part2-scheduling.md">Chapter 2, Part 2 – Scheduling</a></em><br>
 <em>Next: <a href="/content/courses/iot/posts/ch2/ch2-part4-routing.md">Chapter 2, Part 4 – Routing in IoT</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch2/">Chapter 2 – Energy Waste in IoT</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part4-routing/" id="nav-prev">← Chapter 2, Part 4 – Routing in IoT</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part2-scheduling/" id="nav-next">Chapter 2, Part 2 – Scheduling →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

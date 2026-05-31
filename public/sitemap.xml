@@ -5,6 +5,9 @@
     <loc>http://localhost:1313/docs/courses/iot/ch1/ch1-part1-iot-api-intro/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/docs/courses/iot/ch1/ch1-part2-rest-api/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/courses/iot/ch1/ch1-part3-rest-caching/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
@@ -35,14 +38,8 @@
     <loc>http://localhost:1313/docs/courses/iot/ch1/ch1-part12-iot-level6/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/courses/iot/ch1/</loc>
-    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/courses/</loc>
-    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/</loc>
-    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/docs/about/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/ai/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
@@ -57,6 +54,9 @@
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/centralized-controller/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/courses/iot/ch1/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/courses/iot/ch2/</loc>
@@ -86,7 +86,16 @@
     <loc>http://localhost:1313/docs/tags/cloud/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/docs/tags/coordinator/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/courses/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/tags/deployment/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/dodag/</loc>
@@ -96,6 +105,9 @@
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/home-automation/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/tags/http/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/iot/</loc>
@@ -114,6 +126,9 @@
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/level4/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/tags/level5/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/tags/level6/</loc>
@@ -143,6 +158,9 @@
     <loc>http://localhost:1313/docs/tags/proxy/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/docs/tags/real-time/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/docs/tags/rest/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
@@ -158,7 +176,11 @@
     <loc>http://localhost:1313/docs/tags/</loc>
     <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/docs/about/</loc>
+    <loc>http://localhost:1313/docs/tags/websocket/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/tags/wsn/</loc>
+    <lastmod>2026-05-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/apis/</loc>
   </url><url>

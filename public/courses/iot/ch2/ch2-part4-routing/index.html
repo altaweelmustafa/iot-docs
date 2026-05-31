@@ -34,10 +34,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="what-is-routing-in-iot">What Is Routing in IoT?</h2>
+  <hr />
+   <h2 id="what-is-routing-in-iot">What Is Routing in IoT?</h2>
 <p><strong>Routing</strong> is the process of selecting the path that data takes as it travels
 between IoT devices, gateways, coordinators, controller services, or cloud servers.</p>
 <p>Every routing decision directly affects four things:</p>
@@ -120,7 +118,36 @@ dynamically select efficient routes based on real-time network state.</p>
 <p><em>Previous: <a href="/content/courses/iot/posts/ch2/ch2-part3-load-balancing.md">Chapter 2, Part 3 – Load Balancing</a></em><br>
 <em>Next: <a href="/content/courses/iot/posts/ch2/ch2-part5-rpl.md">Chapter 2, Part 5 – RPL Protocol</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch2/">Chapter 2 – Energy Waste in IoT</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part5-rpl/" id="nav-prev">← Chapter 2, Part 5 – RPL Protocol</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part3-load-balancing/" id="nav-next">Chapter 2, Part 3 – Load Balancing →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

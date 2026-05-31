@@ -1,12 +1,13 @@
 ---
 title: "About"
+date: "2026-05-31"
 ---
 
 #### We are:
 
-**Mustafa Altaweel** — [github.com/altaweelmustafa](https://github.com/altaweelmustafa)
+[**Mustafa Altaweel**](https://github.com/altaweelmustafa)
 
-**Samaa Kali** — [github.com/KaliSamaa](https://github.com/KaliSamaa)
+[**Samaa Kali**](https://github.com/kaliSamaa)
 
 Two students going through the same courses, dealing with the same shi*, and
 deciding to do something it.

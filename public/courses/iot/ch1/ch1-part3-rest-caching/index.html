@@ -34,10 +34,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="what-is-api-caching">What Is API Caching?</h2>
+  <hr />
+   <h2 id="what-is-api-caching">What Is API Caching?</h2>
 <blockquote>
 <p>Caching in the REST communication model means storing a copy of a response at
 some intermediate point — client or server side — so that repeated requests for
@@ -132,7 +130,36 @@ repeating the underlying work.</p>
 <p><em>Previous: <a href="/courses/iot/ch1/ch1-part2-rest-api">Chapter 1, Part 2 – REST APIs</a></em>
 <em>Next: <a href="/courses/iot/ch1/ch1-part4-proxy-servers">Chapter 1, Part 4 – Proxy Servers</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch1/">Chapter 1: IoT APIs &amp; Deployment Levels</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part4-proxy-servers/" id="nav-prev">← Chapter 1, Part 4 – Proxy Servers</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part2-rest-api/" id="nav-next">Chapter 1, Part 2 – REST APIs →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

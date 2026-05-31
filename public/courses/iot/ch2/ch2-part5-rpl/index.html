@@ -36,10 +36,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="what-is-rpl">What Is RPL?</h2>
+  <hr />
+   <h2 id="what-is-rpl">What Is RPL?</h2>
 <p><strong>RPL</strong> (Routing Protocol for Low-Power and Lossy Networks) is a lightweight
 distance-vector routing protocol designed specifically for IoT devices — constrained
 sensors with limited memory, processing power, and battery.</p>
@@ -229,7 +227,36 @@ energy during normal operation.</p>
 <p><em>Previous: <a href="/content/courses/iot/posts/ch2/ch2-part4-routing.md">Chapter 2, Part 4 – Routing in IoT</a></em><br>
 <em>Next: <a href="/content/courses/iot/posts/ch2/ch2-part6-ai-rpl.md">Chapter 2, Part 6 – AI-Enhanced RPL</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch2/">Chapter 2 – Energy Waste in IoT</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part6-ai-rpl/" id="nav-prev">← Chapter 2, Part 6 – AI-Enhanced RPL Routing</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch2/ch2-part4-routing/" id="nav-next">Chapter 2, Part 4 – Routing in IoT →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

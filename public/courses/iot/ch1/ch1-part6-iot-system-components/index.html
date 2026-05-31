@@ -35,10 +35,8 @@
   </ul>
 </nav>
   </nav>
-  <hr>
-  
-
-  <h2 id="iot-system-components">IoT System Components</h2>
+  <hr />
+   <h2 id="iot-system-components">IoT System Components</h2>
 <p>Every IoT system — regardless of scale or complexity — is built from the same core
 set of components. Understanding these is the foundation for understanding how the
 deployment levels differ from each other.</p>
@@ -161,7 +159,36 @@ centralized intelligence.</p>
 <p><em>Previous: <a href="/courses/iot/ch1/ch1-part5-websocket-api">Chapter 1, Part 5 – WebSocket APIs</a></em>
 <em>Next: <a href="/courses/iot/ch1/ch1-part7-iot-level1">Chapter 1, Part 7 – IoT Level-1</a></em></p>
 
+
+  <nav class="post-nav">
+    <div class="post-nav-back">
+         
+      <a href="http://localhost:1313/docs/courses/">Courses</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/">IoT Security</a> /   
+      <a href="http://localhost:1313/docs/courses/iot/ch1/">Chapter 1: IoT APIs &amp; Deployment Levels</a> /  
+    </div>
+    <div class="post-nav-arrows">
+      
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part7-iot-level1/" id="nav-prev">← Chapter 1, Part 7 – IoT Level-1</a>
+       
+      <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part5-websocket-api/" id="nav-next">Chapter 1, Part 5 – WebSocket APIs &amp; Exclusive Pair →</a>
+      
+    </div>
+  </nav>
 </article>
+
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      const prev = document.getElementById("nav-prev");
+      if (prev) window.location.href = prev.href;
+    }
+    if (e.key === "ArrowRight") {
+      const next = document.getElementById("nav-next");
+      if (next) window.location.href = next.href;
+    }
+  });
+</script>
 
   </main>
 

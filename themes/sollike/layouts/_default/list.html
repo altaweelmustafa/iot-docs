@@ -1,27 +1,30 @@
 {{ define "main" }}
+<div class="post-nav-back">
+  {{ range .Ancestors.Reverse }} {{ if ne .Kind "home" }}
+  <a href="{{ .Permalink }}">{{ .Title }}</a> / {{ end }} {{ end }}
+</div>
+
 <h2>{{ .Title }}</h2>
-{{ with .Description }}<p class="subtitle">{{ . }}</p>{{ end }}
-
-{{ if .Sections }}
-  {{ range .Sections.ByWeight }}
-  <div class="post-entry">
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    {{ with .Description }}<p class="post-desc">{{ . }}</p>{{ end }}
-  </div>
+{{ with .Description }}
+<p class="subtitle">{{ . }}</p>
+{{ end }} {{ if .Sections }} {{ range .Sections.ByWeight }}
+<div class="post-entry">
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{ with .Description }}
+  <p class="post-desc">{{ . }}</p>
   {{ end }}
-{{ end }}
-
-{{ if .RegularPages }}
-<hr>
+</div>
+{{ end }} {{ end }} {{ if .RegularPages }}
+<hr />
 <div id="post-list">
   {{ range .RegularPages.ByWeight }}
   <div class="post-entry">
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     <span class="post-date">— {{ .Date.Format "2006 Jan 02" }}</span>
-    {{ with .Description }}<p class="post-desc">{{ . }}</p>{{ end }}
+    {{ with .Description }}
+    <p class="post-desc">{{ . }}</p>
+    {{ end }}
   </div>
   {{ end }}
 </div>
-{{ end }}
-
-{{ end }}
+{{ end }} {{ end }}
