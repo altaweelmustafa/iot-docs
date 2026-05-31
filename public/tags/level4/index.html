@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level4 · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<h2>Level4</h2>
+
+
+
+
+
+<hr>
+<div class="sort-bar">
+  <span>Sort by:</span>
+  <button onclick="sortPosts('date-desc')">Date ↓</button>
+  <button onclick="sortPosts('date-asc')">Date ↑</button>
+  <button onclick="sortPosts('name-asc')">Name A–Z</button>
+  <button onclick="sortPosts('name-desc')">Name Z–A</button>
+</div>
+<div id="post-list">
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 1, part 10 – iot level-4">
+    <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part10-iot-level4/">Chapter 1, Part 10 – IoT Level-4</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">Level-4 IoT systems: multiple nodes with local analysis, cloud storage, and observer nodes — noise monitoring example and MATLAB simulation.</p>
+  </div>
+  
+</div>
+<script>
+function sortPosts(method) {
+  const list = document.getElementById('post-list');
+  const posts = Array.from(list.querySelectorAll('.post-entry'));
+  posts.sort((a, b) => {
+    if (method === 'date-desc') return b.dataset.date.localeCompare(a.dataset.date);
+    if (method === 'date-asc')  return a.dataset.date.localeCompare(b.dataset.date);
+    if (method === 'name-asc')  return a.dataset.title.localeCompare(b.dataset.title);
+    if (method === 'name-desc') return b.dataset.title.localeCompare(a.dataset.title);
+  });
+  posts.forEach(p => list.appendChild(p));
+}
+</script>
+
+
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

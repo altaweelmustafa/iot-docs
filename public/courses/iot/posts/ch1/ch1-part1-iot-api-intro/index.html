@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 1 – IoT APIs: Introduction &amp; Types · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 1 – IoT APIs: Introduction &amp; Types</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-an-iot-api">What Is an IoT API?</a></li>
+    <li><a href="#tasks-an-iot-api-can-perform">Tasks an IoT API Can Perform</a></li>
+    <li><a href="#main-api-types">Main API Types</a>
+      <ul>
+        <li><a href="#open-public-apis">Open (Public) APIs</a></li>
+        <li><a href="#partner-apis">Partner APIs</a></li>
+        <li><a href="#internal-private-apis">Internal (Private) APIs</a></li>
+        <li><a href="#composite-apis">Composite APIs</a></li>
+      </ul>
+    </li>
+    <li><a href="#comparison-summary">Comparison Summary</a></li>
+    <li><a href="#api-communication-styles-in-iot">API Communication Styles in IoT</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-an-iot-api">What Is an IoT API?</h2>
+<blockquote>
+<p>An IoT API (Application Programming Interface) is a standardized communication
+bridge between IoT devices and the external applications or systems that interact
+with them.</p>
+</blockquote>
+<p>Instead of every smart home app needing to understand each manufacturer&rsquo;s
+proprietary protocol, an API provides a unified interface. A single application can
+control thermostats, lights, door locks, and security cameras from different vendors
+because the API abstracts the underlying hardware differences away.</p>
+<hr>
+<h2 id="tasks-an-iot-api-can-perform">Tasks an IoT API Can Perform</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Device Control</strong></td>
+          <td>Send commands to devices — turn lights on/off, lock doors, adjust thermostat settings</td>
+      </tr>
+      <tr>
+          <td><strong>Data Retrieval</strong></td>
+          <td>Read sensor values or device status at any point in time</td>
+      </tr>
+      <tr>
+          <td><strong>Event Handling</strong></td>
+          <td>Subscribe to device-generated events (motion detected, door opened) and trigger responses such as notifications or automated actions</td>
+      </tr>
+      <tr>
+          <td><strong>Configuration Management</strong></td>
+          <td>Update device settings, schedules, thresholds, and parameters remotely</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="main-api-types">Main API Types</h2>
+<p>APIs are classified into four types based on who can access them and under what
+conditions.</p>
+<h3 id="open-public-apis">Open (Public) APIs</h3>
+<blockquote>
+<p>Open APIs are publicly available with no access restrictions, approval processes,
+or fees.</p>
+</blockquote>
+<p>Key characteristics:</p>
+<ul>
+<li><strong>Accessibility</strong> — documentation is publicly available; no barriers to entry.</li>
+<li><strong>Transparency</strong> — clearly documented so any developer understands what the API
+offers and how to use it.</li>
+<li><strong>Flexibility</strong> — supports multiple programming languages and various use cases.</li>
+</ul>
+<p>Companies expose Open APIs to encourage third-party developers to extend their
+platforms.</p>
+<p><strong>IoT example:</strong> Samsung SmartThings API — allows any developer to connect,
+automate, and manage smart home devices including lights, thermostats, and sensors.</p>
+<hr>
+<h3 id="partner-apis">Partner APIs</h3>
+<blockquote>
+<p>Partner APIs are not publicly available. Access requires a license, permission,
+or a formal partnership agreement with the provider.</p>
+</blockquote>
+<p>Key characteristics:</p>
+<ul>
+<li>Access controlled via API keys or other authentication mechanisms.</li>
+<li>Documentation exists but is shared only with approved partners.</li>
+<li>Providers typically offer dedicated support, tutorials, and sample code to
+onboarded partners.</li>
+</ul>
+<p><strong>IoT example:</strong> Amazon Web Services (AWS) IoT API — allows developers to connect
+IoT devices to the cloud, manage device data securely, and build scalable IoT
+applications, but is governed by AWS terms and service agreements.</p>
+<p>Social media platforms such as Facebook, Twitter, and Instagram also offer Partner
+APIs for approved third-party integrations.</p>
+<hr>
+<h3 id="internal-private-apis">Internal (Private) APIs</h3>
+<blockquote>
+<p>Internal APIs are designed exclusively for use within a single organization and
+are never exposed to external developers or end users.</p>
+</blockquote>
+<p>Key characteristics:</p>
+<ul>
+<li>Documentation is accessible only to internal teams and developers.</li>
+<li>Access is restricted to authorized systems within the organization&rsquo;s internal
+network.</li>
+<li>Unlike public APIs built for external consumption, internal APIs connect internal
+services to each other.</li>
+</ul>
+<hr>
+<h3 id="composite-apis">Composite APIs</h3>
+<blockquote>
+<p>A Composite API combines multiple API types into a single call, executing them
+synchronously to improve speed and performance efficiency.</p>
+</blockquote>
+<p>Rather than making several sequential API calls, a composite API bundles them.
+This reduces round-trip overhead and is especially useful when a client needs data
+from multiple sources in one operation.</p>
+<hr>
+<h2 id="comparison-summary">Comparison Summary</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Availability</th>
+          <th>Access Control</th>
+          <th>Primary Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Open / Public</td>
+          <td>Anyone</td>
+          <td>None or minimal</td>
+          <td>Third-party app development</td>
+      </tr>
+      <tr>
+          <td>Partner</td>
+          <td>Approved partners only</td>
+          <td>API keys, agreements</td>
+          <td>Controlled integrations</td>
+      </tr>
+      <tr>
+          <td>Internal / Private</td>
+          <td>Organization only</td>
+          <td>Network + auth restrictions</td>
+          <td>Internal microservices</td>
+      </tr>
+      <tr>
+          <td>Composite</td>
+          <td>Depends on components</td>
+          <td>Depends on components</td>
+          <td>Multi-source, single-call operations</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="api-communication-styles-in-iot">API Communication Styles in IoT</h2>
+<p>The three main communication API styles used in IoT systems are:</p>
+<ul>
+<li><strong>REST</strong> — follows the Request-Response model</li>
+<li><strong>WebSocket</strong> — follows the Exclusive Pair model</li>
+<li><strong>SOAP</strong> — Simple Object Access Protocol</li>
+</ul>
+<p>The following parts cover each in detail.</p>
+<hr>
+<p><em>Previous: <a href="/courses/iot/posts/ch1-introduction-to-iot">Chapter 1 – Introduction to IoT</a></em>
+<em>Next: <a href="/courses/iot/posts/ch1-part2-rest-api">Chapter 1, Part 2 – REST APIs</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

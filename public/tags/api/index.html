@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<h2>Api</h2>
+
+
+
+
+
+<hr>
+<div class="sort-bar">
+  <span>Sort by:</span>
+  <button onclick="sortPosts('date-desc')">Date ↓</button>
+  <button onclick="sortPosts('date-asc')">Date ↑</button>
+  <button onclick="sortPosts('name-asc')">Name A–Z</button>
+  <button onclick="sortPosts('name-desc')">Name Z–A</button>
+</div>
+<div id="post-list">
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 1, part 4 – proxy servers">
+    <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part5-websocket-api/">Chapter 1, Part 4 – Proxy Servers</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">What proxy servers are, how they sit between clients and the internet, and their four main purposes: filtering, performance, anonymity, and security.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 1, part 4 – proxy servers">
+    <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part4-proxy-servers/">Chapter 1, Part 4 – Proxy Servers</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">What proxy servers are, how they sit between clients and the internet, and their four main purposes: filtering, performance, anonymity, and security.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 1, part 3 – rest caching">
+    <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part3-rest-caching/">Chapter 1, Part 3 – REST Caching</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">How REST APIs use caching to reduce latency and server load — client-side vs server-side caching explained.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 1, part 1 – iot apis: introduction &amp; types">
+    <a href="http://localhost:1313/docs/courses/iot/ch1/ch1-part1-iot-api-intro/">Chapter 1, Part 1 – IoT APIs: Introduction &amp; Types</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">What an IoT API is, what tasks it enables, and the four main API types: Open, Partner, Internal, and Composite.</p>
+  </div>
+  
+</div>
+<script>
+function sortPosts(method) {
+  const list = document.getElementById('post-list');
+  const posts = Array.from(list.querySelectorAll('.post-entry'));
+  posts.sort((a, b) => {
+    if (method === 'date-desc') return b.dataset.date.localeCompare(a.dataset.date);
+    if (method === 'date-asc')  return a.dataset.date.localeCompare(b.dataset.date);
+    if (method === 'name-asc')  return a.dataset.title.localeCompare(b.dataset.title);
+    if (method === 'name-desc') return b.dataset.title.localeCompare(a.dataset.title);
+  });
+  posts.forEach(p => list.appendChild(p));
+}
+</script>
+
+
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

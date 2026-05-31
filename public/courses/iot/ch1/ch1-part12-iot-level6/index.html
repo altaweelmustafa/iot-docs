@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 12 – IoT Level-6 · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 12 – IoT Level-6</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-iot-level-6">What Is IoT Level-6?</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#application-smart-building--industrial-monitoring">Application: Smart Building / Industrial Monitoring</a></li>
+    <li><a href="#matlab-simulation">MATLAB Simulation</a></li>
+    <li><a href="#full-level-comparison">Full Level Comparison</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-iot-level-6">What Is IoT Level-6?</h2>
+<blockquote>
+<p>A Level-6 IoT system has <strong>multiple independent end nodes</strong> that each perform
+sensing and/or actuation and send data directly to the cloud. A <strong>centralized
+controller</strong> in the cloud is aware of the status of all end nodes and sends
+control commands back to them. The analytics component analyzes data and stores
+results in the cloud database. Results are visualized through the cloud
+application.</p>
+</blockquote>
+<p>Level-6 is the most complete IoT deployment model. There is no coordinator node
+aggregating data locally — each node is independent and communicates directly with
+the cloud. Intelligence is fully centralized in the cloud controller.</p>
+<p><strong>Key distinction from Level-5:</strong> Level-5 uses a local coordinator to funnel data
+upward. Level-6 nodes each communicate independently, and the cloud controller
+provides top-down command and control across all of them simultaneously.</p>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Local]                                        [Cloud]
+</span></span><span class="line"><span class="cl">Observer                    App                        Observer
+</span></span><span class="line"><span class="cl"> Node ◄──────────────────────────────────────────────► Node
+</span></span><span class="line"><span class="cl">              REST/WebSocket Communication
+</span></span><span class="line"><span class="cl">                ▼               ▼
+</span></span><span class="line"><span class="cl">           Controller      Controller   ◄──► Centralized  ◄──► REST/WebSocket ◄──► Analytics
+</span></span><span class="line"><span class="cl">            Service         Service          Controller         Services            Component
+</span></span><span class="line"><span class="cl">              ▼               ▼                                     ▼
+</span></span><span class="line"><span class="cl">           Resource        Resource                             Database
+</span></span><span class="line"><span class="cl">              ▼               ▼
+</span></span><span class="line"><span class="cl">            Device          Device
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">● Multiple Monitoring Nodes ──► Centralized Controller ──► Cloud Storage &amp; Analysis
+</span></span></code></pre></div><p>Each node connects independently to the cloud. The centralized controller has a
+global view — it knows the state of every node and can dispatch targeted commands
+to individual nodes or groups.</p>
+<hr>
+<h2 id="application-smart-building--industrial-monitoring">Application: Smart Building / Industrial Monitoring</h2>
+<p>Multiple nodes monitor different parameters across different zones of a building or
+facility — temperature in one room, gas levels in another, energy consumption in a
+third.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Each node sends its data directly to the cloud independently.</li>
+<li>The analytics component processes data from all nodes.</li>
+<li>The centralized controller detects anomalies or threshold violations across the
+whole system.</li>
+<li>The controller dispatches targeted commands back to specific nodes — activate
+cooling in Zone 1, trigger a gas alarm in Zone 2.</li>
+<li>Results are visualized on a cloud-based dashboard.</li>
+</ul>
+<p><strong>Why Level-6:</strong> No local coordinator is needed or wanted. Each node is
+independent. The cloud has full visibility and full control. This is the model for
+large-scale industrial deployments where central coordination must span many
+devices across many locations.</p>
+<hr>
+<h2 id="matlab-simulation">MATLAB Simulation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">time</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">60</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Node 1 - Temperature sensor (independent cloud upload)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Temp</span> <span class="p">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="n">time</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">writetable</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">time</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">Temp</span><span class="o">&#39;</span><span class="p">,</span> <span class="s">&#39;VariableNames&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;Time&#39;</span><span class="p">,</span> <span class="s">&#39;Temp&#39;</span><span class="p">}),</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;Node1Data.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Node 2 - Gas sensor (independent cloud upload)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Gas</span> <span class="p">=</span> <span class="mi">30</span> <span class="o">+</span> <span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="n">time</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">writetable</span><span class="p">(</span><span class="n">table</span><span class="p">(</span><span class="n">time</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">Gas</span><span class="o">&#39;</span><span class="p">,</span> <span class="s">&#39;VariableNames&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;Time&#39;</span><span class="p">,</span> <span class="s">&#39;Gas&#39;</span><span class="p">}),</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;Node2Data.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Centralized Controller (cloud-side logic — reads all nodes independently)</span>
+</span></span><span class="line"><span class="cl"><span class="n">TempData</span> <span class="p">=</span> <span class="n">readtable</span><span class="p">(</span><span class="s">&#39;Node1Data.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">GasData</span>  <span class="p">=</span> <span class="n">readtable</span><span class="p">(</span><span class="s">&#39;Node2Data.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">mean</span><span class="p">(</span><span class="n">TempData</span><span class="p">.</span><span class="n">Temp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Central Controller: Send cooling command to Node 1&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">mean</span><span class="p">(</span><span class="n">GasData</span><span class="p">.</span><span class="n">Gas</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">35</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Central Controller: Trigger gas alarm at Node 2&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><p>Each node writes to its own file independently — no coordination between Node 1
+and Node 2. The centralized controller reads all sources and issues targeted
+commands.</p>
+<hr>
+<h2 id="full-level-comparison">Full Level Comparison</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Level</th>
+          <th>Nodes</th>
+          <th>Analysis</th>
+          <th>Storage</th>
+          <th>App</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Single</td>
+          <td>Local</td>
+          <td>Local</td>
+          <td>Local</td>
+          <td>Home Automation</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Single</td>
+          <td>Local</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Smart Irrigation</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Single + gateway</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Package Tracking</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Multiple</td>
+          <td>Local + observer</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Noise Monitoring</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Multiple end + coordinator</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Forest Fire Detection</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>Multiple independent</td>
+          <td>Cloud (centralized controller)</td>
+          <td>Cloud</td>
+          <td>Cloud</td>
+          <td>Smart Building</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>The progression: single node → multiple nodes → coordinator → independent nodes
+with centralized cloud control. Each level trades local simplicity for cloud
+scalability and intelligence.</p>
+</blockquote>
+<hr>
+<p><em>Previous: <a href="/courses/iot/ch1/ch1-part11-iot-level5">Chapter 1, Part 11 – IoT Level-5</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

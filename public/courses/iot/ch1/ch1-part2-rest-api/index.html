@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 2 – REST APIs · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 2 – REST APIs</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-rest">What Is REST?</a></li>
+    <li><a href="#how-rest-works">How REST Works</a></li>
+    <li><a href="#http-methods-in-rest">HTTP Methods in REST</a></li>
+    <li><a href="#advantages-of-rest">Advantages of REST</a>
+      <ul>
+        <li><a href="#simplicity-and-ease-of-use">Simplicity and Ease of Use</a></li>
+        <li><a href="#flexibility-and-scalability">Flexibility and Scalability</a></li>
+        <li><a href="#statelessness">Statelessness</a></li>
+        <li><a href="#caching">Caching</a></li>
+        <li><a href="#security">Security</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-rest">What Is REST?</h2>
+<blockquote>
+<p>REST (Representational State Transfer) is a set of architectural principles for
+designing web services that focus on a system&rsquo;s resources and how their states
+are addressed and transferred.</p>
+</blockquote>
+<p>REST APIs follow the <strong>request-response</strong> communication model. An HTTP client sends
+a request; the server processes it and sends back a response. The REST constraints
+apply to all components, connectors, and data elements within a distributed
+hypermedia system.</p>
+<p><strong>IoT example:</strong> A temperature sensor periodically sends readings to a cloud server
+by making HTTP POST requests to a RESTful API endpoint.</p>
+<hr>
+<h2 id="how-rest-works">How REST Works</h2>
+<p>A REST-aware HTTP client communicates with a RESTful web service through an HTTP
+packet. The packet contains:</p>
+<ul>
+<li>An <strong>HTTP command</strong> (GET, PUT, POST, DELETE)</li>
+<li>A <strong>REST payload</strong> in JSON or XML format</li>
+</ul>
+<p>The server holds resources identified by URIs, each with one or more
+representations.</p>
+<hr>
+<h2 id="http-methods-in-rest">HTTP Methods in REST</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>GET</strong></td>
+          <td>Retrieve a resource</td>
+      </tr>
+      <tr>
+          <td><strong>POST</strong></td>
+          <td>Submit new data to the server</td>
+      </tr>
+      <tr>
+          <td><strong>PUT</strong></td>
+          <td>Update an existing resource</td>
+      </tr>
+      <tr>
+          <td><strong>DELETE</strong></td>
+          <td>Remove a resource</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="advantages-of-rest">Advantages of REST</h2>
+<h3 id="simplicity-and-ease-of-use">Simplicity and Ease of Use</h3>
+<p>REST is built on standard HTTP methods that are already universally understood and
+supported. Developers do not need to learn new protocols or tools — if you know
+HTTP, you can use REST.</p>
+<h3 id="flexibility-and-scalability">Flexibility and Scalability</h3>
+<p>REST APIs are platform-independent. They work with any programming language or
+system that supports HTTP, making them highly portable across different environments
+and easy to scale.</p>
+<h3 id="statelessness">Statelessness</h3>
+<blockquote>
+<p>Each request from a client contains all the information needed to process it.
+The server holds no client state between requests.</p>
+</blockquote>
+<p>This simplifies server implementation and allows for better scalability — no session
+storage or state synchronization required on the server side.</p>
+<h3 id="caching">Caching</h3>
+<p>REST can take advantage of HTTP caching mechanisms at multiple layers — client,
+proxy, and server — to improve performance and reduce server load. Frequently
+requested responses are stored and reused rather than recomputed.</p>
+<h3 id="security">Security</h3>
+<p>REST can leverage existing HTTP security mechanisms:</p>
+<ul>
+<li><strong>HTTPS</strong> for encrypted communication.</li>
+<li><strong>OAuth</strong> authentication headers.</li>
+<li><strong>JWT (JSON Web Tokens)</strong> for access control.</li>
+</ul>
+<hr>
+<p><em>Previous: <a href="/courses/iot/ch1/ch1-part1-iot-api-intro">Chapter 1, Part 1 – IoT APIs: Introduction &amp; Types</a></em>
+<em>Next: <a href="/courses/iot/ch1/ch1-part3-rest-caching">Chapter 1, Part 3 – REST Caching</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

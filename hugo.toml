@@ -1,11 +1,11 @@
-baseURL = "https://altaweelmustafa.github.io/iot-docs/"
+baseURL = "https://altaweelmustafa.github.io/docs/"
 languageCode = "en-us"
-title = "IoT Docs"
+title = "Docs"
 theme = "sollike"
 
 [params]
-  subtitle = "IoT midterm documentation"
-  footer = "© 2026 Mustafa and Samaa hehe"
+  subtitle = "Courses/Books/APIs documentation"
+  footer = "© 2026 Mustafa and Samaa"
 
 [pagination]
   pagerSize = 10
@@ -14,21 +14,26 @@ theme = "sollike"
   [markup.highlight]
     codeFences  = true
     guessSyntax = true
-    noClasses = false
+    noClasses   = false
   [markup.goldmark.renderer]
     unsafe = true
 
 [[menu.main]]
-  name = "Home"
-  url = "/"
+  name = "Courses"
+  url = "/courses"
   weight = 1
 
 [[menu.main]]
-  name = "Docs"
-  url = "/posts"
+  name = "Books"
+  url = "/books"
   weight = 2
+
+[[menu.main]]
+  name = "APIs"
+  url = "/apis"
+  weight = 3
 
 [[menu.main]]
   name = "About"
   url = "/about"
-  weight = 3
+  weight = 4

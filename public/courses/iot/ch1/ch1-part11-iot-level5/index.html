@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 11 – IoT Level-5 · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 11 – IoT Level-5</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-iot-level-5">What Is IoT Level-5?</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#application-forest-fire-detection">Application: Forest Fire Detection</a></li>
+    <li><a href="#matlab-simulation">MATLAB Simulation</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-iot-level-5">What Is IoT Level-5?</h2>
+<blockquote>
+<p>A Level-5 IoT system has <strong>multiple end nodes</strong> and <strong>one coordinator node</strong>.
+End nodes perform sensing and/or actuation. The coordinator node collects data
+from the end nodes and forwards it to the cloud. Data is stored and analyzed in
+the cloud, and the application is cloud-based.</p>
+</blockquote>
+<p>Level-5 is the standard <strong>Wireless Sensor Network (WSN)</strong> deployment template.
+Rather than each node communicating independently with the cloud, all end nodes
+report to a single coordinator that handles the upward data transmission.</p>
+<p><strong>Best for:</strong> WSN-based solutions with large data and computationally intensive
+cloud analysis requirements.</p>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Local]                                     [Cloud]
+</span></span><span class="line"><span class="cl">Observer                    App                     Observer
+</span></span><span class="line"><span class="cl"> Node ◄─────────────────────────────────────────────► Node
+</span></span><span class="line"><span class="cl">              REST/WebSocket Communication
+</span></span><span class="line"><span class="cl">                ▼              ▼              ▼
+</span></span><span class="line"><span class="cl">           Controller    Controller      Controller
+</span></span><span class="line"><span class="cl">            Service       Service         Service
+</span></span><span class="line"><span class="cl">              ▼              ▼              ▼
+</span></span><span class="line"><span class="cl">           Resource       Resource       Resource     REST/WebSocket ◄──► Analytics
+</span></span><span class="line"><span class="cl">              ▼              ▼              ▼            Services          Component
+</span></span><span class="line"><span class="cl">           Endpoint       Endpoint    Coordinator ◄──────────────────── Database
+</span></span><span class="line"><span class="cl">            Device         Device       Device
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">● Routers/End Points ──► Coordinator ──────────────► Cloud Storage &amp; Analysis
+</span></span></code></pre></div><p>End nodes communicate with the coordinator locally (often over Zigbee, Z-Wave, or
+LoRa). The coordinator handles the single uplink to the cloud.</p>
+<hr>
+<h2 id="application-forest-fire-detection">Application: Forest Fire Detection</h2>
+<p>Sensor nodes distributed throughout a forest continuously monitor environmental
+conditions.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Each end node measures temperature, humidity, smoke density, and other
+fire-risk indicators.</li>
+<li>The coordinator node gathers readings from all end nodes periodically.</li>
+<li>The aggregated dataset is transmitted to the cloud for storage.</li>
+<li>Cloud analytics runs predictive models on the data to assess fire risk and
+forecast potential outcomes before a fire ignites.</li>
+</ul>
+<p><strong>Why Level-5:</strong> Dozens or hundreds of sensors are spread across a large area —
+a coordinator is needed to aggregate local data efficiently before the cloud
+uplink. Analysis is complex (predictive modeling), so it belongs in the cloud.</p>
+<hr>
+<h2 id="matlab-simulation">MATLAB Simulation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">time</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">60</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% End nodes generate environmental readings</span>
+</span></span><span class="line"><span class="cl"><span class="n">Temp</span> <span class="p">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="n">time</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hum</span>  <span class="p">=</span> <span class="mi">30</span> <span class="o">+</span> <span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="n">time</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Coordinator aggregates and sends to cloud (xlsx simulates cloud upload)</span>
+</span></span><span class="line"><span class="cl"><span class="n">CoordinatorData</span> <span class="p">=</span> <span class="n">table</span><span class="p">(</span><span class="n">time</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">Temp</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">Hum</span><span class="o">&#39;</span><span class="p">,</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;VariableNames&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;Time&#39;</span><span class="p">,</span> <span class="s">&#39;Temp&#39;</span><span class="p">,</span> <span class="s">&#39;Humidity&#39;</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="n">writetable</span><span class="p">(</span><span class="n">CoordinatorData</span><span class="p">,</span> <span class="s">&#39;Coordinator.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Cloud analytics reads coordinator data</span>
+</span></span><span class="line"><span class="cl"><span class="n">CloudData</span> <span class="p">=</span> <span class="n">readtable</span><span class="p">(</span><span class="s">&#39;Coordinator.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">mean</span><span class="p">(</span><span class="n">CloudData</span><span class="p">.</span><span class="n">Temp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Alert: High Average Temp&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">mean</span><span class="p">(</span><span class="n">CloudData</span><span class="p">.</span><span class="n">Humidity</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">40</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Alert: High Average Humidity&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><p>The coordinator aggregates all end-node readings into a single upload. Cloud
+analytics evaluates averages across the whole network — not just individual
+node readings.</p>
+<hr>
+<p><em>Previous: <a href="/courses/iot/posts/ch1-part10-iot-level4">Chapter 1, Part 10 – IoT Level-4</a></em>
+<em>Next: <a href="/courses/iot/posts/ch1-part12-iot-level6">Chapter 1, Part 12 – IoT Level-6</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

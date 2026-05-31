@@ -1,81 +1,214 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on IoT Docs</title>
-    <link>http://localhost:1313/iot-docs/tags/</link>
-    <description>Recent content in Tags on IoT Docs</description>
+    <title>Tags on Docs</title>
+    <link>http://localhost:1313/docs/tags/</link>
+    <description>Recent content in Tags on Docs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/iot-docs/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/docs/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
-      <link>http://localhost:1313/iot-docs/tags/ai/</link>
+      <link>http://localhost:1313/docs/tags/ai/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/ai/</guid>
+      <guid>http://localhost:1313/docs/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Api</title>
+      <link>http://localhost:1313/docs/tags/api/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>http://localhost:1313/docs/tags/architecture/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/architecture/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Caching</title>
+      <link>http://localhost:1313/docs/tags/caching/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/caching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Centralized-Controller</title>
+      <link>http://localhost:1313/docs/tags/centralized-controller/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/centralized-controller/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chapter1</title>
+      <link>http://localhost:1313/docs/tags/chapter1/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/chapter1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>http://localhost:1313/docs/tags/cloud/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deployment</title>
+      <link>http://localhost:1313/docs/tags/deployment/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/deployment/</guid>
       <description></description>
     </item>
     <item>
       <title>Dodag</title>
-      <link>http://localhost:1313/iot-docs/tags/dodag/</link>
+      <link>http://localhost:1313/docs/tags/dodag/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/dodag/</guid>
+      <guid>http://localhost:1313/docs/tags/dodag/</guid>
       <description></description>
     </item>
     <item>
       <title>Energy</title>
-      <link>http://localhost:1313/iot-docs/tags/energy/</link>
+      <link>http://localhost:1313/docs/tags/energy/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/energy/</guid>
+      <guid>http://localhost:1313/docs/tags/energy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Home-Automation</title>
+      <link>http://localhost:1313/docs/tags/home-automation/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/home-automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Iot</title>
-      <link>http://localhost:1313/iot-docs/tags/iot/</link>
+      <link>http://localhost:1313/docs/tags/iot/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/iot/</guid>
+      <guid>http://localhost:1313/docs/tags/iot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Level1</title>
+      <link>http://localhost:1313/docs/tags/level1/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/level1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Level2</title>
+      <link>http://localhost:1313/docs/tags/level2/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/level2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Level3</title>
+      <link>http://localhost:1313/docs/tags/level3/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/level3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Level4</title>
+      <link>http://localhost:1313/docs/tags/level4/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/level4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Level6</title>
+      <link>http://localhost:1313/docs/tags/level6/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/level6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Levels</title>
+      <link>http://localhost:1313/docs/tags/levels/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/levels/</guid>
       <description></description>
     </item>
     <item>
       <title>Load-Balancing</title>
-      <link>http://localhost:1313/iot-docs/tags/load-balancing/</link>
+      <link>http://localhost:1313/docs/tags/load-balancing/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/load-balancing/</guid>
+      <guid>http://localhost:1313/docs/tags/load-balancing/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine-Learning</title>
-      <link>http://localhost:1313/iot-docs/tags/machine-learning/</link>
+      <link>http://localhost:1313/docs/tags/machine-learning/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/machine-learning/</guid>
+      <guid>http://localhost:1313/docs/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Matlab</title>
+      <link>http://localhost:1313/docs/tags/matlab/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/matlab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/docs/tags/networking/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observer</title>
+      <link>http://localhost:1313/docs/tags/observer/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/observer/</guid>
       <description></description>
     </item>
     <item>
       <title>Offloading</title>
-      <link>http://localhost:1313/iot-docs/tags/offloading/</link>
+      <link>http://localhost:1313/docs/tags/offloading/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/offloading/</guid>
+      <guid>http://localhost:1313/docs/tags/offloading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy</title>
+      <link>http://localhost:1313/docs/tags/proxy/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rest</title>
+      <link>http://localhost:1313/docs/tags/rest/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/tags/rest/</guid>
       <description></description>
     </item>
     <item>
       <title>Routing</title>
-      <link>http://localhost:1313/iot-docs/tags/routing/</link>
+      <link>http://localhost:1313/docs/tags/routing/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/routing/</guid>
+      <guid>http://localhost:1313/docs/tags/routing/</guid>
       <description></description>
     </item>
     <item>
       <title>Rpl</title>
-      <link>http://localhost:1313/iot-docs/tags/rpl/</link>
+      <link>http://localhost:1313/docs/tags/rpl/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/rpl/</guid>
+      <guid>http://localhost:1313/docs/tags/rpl/</guid>
       <description></description>
     </item>
     <item>
       <title>Scheduling</title>
-      <link>http://localhost:1313/iot-docs/tags/scheduling/</link>
+      <link>http://localhost:1313/docs/tags/scheduling/</link>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/iot-docs/tags/scheduling/</guid>
+      <guid>http://localhost:1313/docs/tags/scheduling/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 10 – IoT Level-4 · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 10 – IoT Level-4</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-iot-level-4">What Is IoT Level-4?</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#application-noise-monitoring-system">Application: Noise Monitoring System</a></li>
+    <li><a href="#matlab-simulation">MATLAB Simulation</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-iot-level-4">What Is IoT Level-4?</h2>
+<blockquote>
+<p>A Level-4 IoT system has <strong>multiple nodes</strong> that each perform local analysis.
+Data is stored in the cloud. The application is cloud-based. It includes both
+local and cloud-based <strong>observer nodes</strong> that can subscribe to and receive data
+collected in the cloud from IoT devices.</p>
+</blockquote>
+<p>The jump from Level-3 to Level-4 is: <strong>multiple nodes</strong> plus <strong>observer nodes</strong>
+that subscribe to cloud data for additional processing, visualization, or
+alerting.</p>
+<p><strong>Best for:</strong> Solutions requiring multiple distributed nodes, large data, and
+computationally intensive analysis.</p>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Local]                                [Cloud]
+</span></span><span class="line"><span class="cl">Observer                    App               Observer
+</span></span><span class="line"><span class="cl"> Node ◄──────────────────────────────────────► Node
+</span></span><span class="line"><span class="cl">         REST/WebSocket Communication
+</span></span><span class="line"><span class="cl">              ▼                    ▼
+</span></span><span class="line"><span class="cl">Controller  Controller      REST Services ◄──► Analytics
+</span></span><span class="line"><span class="cl"> Service     Service              ▼            Component
+</span></span><span class="line"><span class="cl">    ▼           ▼             Database        (IoT Intelligence)
+</span></span><span class="line"><span class="cl"> Resource    Resource
+</span></span><span class="line"><span class="cl">    ▼           ▼
+</span></span><span class="line"><span class="cl">  Device      Device
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">● Monitoring Nodes ──────────────────────► Cloud Storage
+</span></span><span class="line"><span class="cl">  (perform local analysis)
+</span></span></code></pre></div><p>Observer nodes — both local and cloud-based — subscribe to data aggregated in the
+cloud and may run additional analytics, dashboards, or trigger actions based on
+predefined rules.</p>
+<hr>
+<h2 id="application-noise-monitoring-system">Application: Noise Monitoring System</h2>
+<p>Multiple sound sensor nodes are placed in different physical locations to measure
+noise levels across an area — a city district, an industrial site, a concert venue.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Each node independently measures and analyzes noise levels locally.</li>
+<li>Noise data from all nodes is transmitted to the cloud for storage.</li>
+<li>Observer nodes subscribe to the cloud data and produce dashboards, regulatory
+reports, or alerts when noise thresholds are exceeded.</li>
+</ul>
+<p><strong>Why Level-4:</strong> Multiple geographically distributed sensors are needed. Local
+analysis handles threshold detection per node. Cloud storage and observer nodes
+handle cross-site aggregation and reporting.</p>
+<hr>
+<h2 id="matlab-simulation">MATLAB Simulation</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-matlab" data-lang="matlab"><span class="line"><span class="cl"><span class="n">time</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">60</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Node 1 - Temperature sensor</span>
+</span></span><span class="line"><span class="cl"><span class="n">Temp1</span> <span class="p">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="n">time</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">TempStatus1</span> <span class="p">=</span> <span class="n">Temp1</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Node1Data</span> <span class="p">=</span> <span class="n">table</span><span class="p">(</span><span class="n">time</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">Temp1</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">TempStatus1</span><span class="o">&#39;</span><span class="p">,</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;VariableNames&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;Time&#39;</span><span class="p">,</span> <span class="s">&#39;Temp&#39;</span><span class="p">,</span> <span class="s">&#39;TempStatus&#39;</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="n">writetable</span><span class="p">(</span><span class="n">Node1Data</span><span class="p">,</span> <span class="s">&#39;Node1.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Node 2 - Humidity sensor</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hum2</span> <span class="p">=</span> <span class="mi">30</span> <span class="o">+</span> <span class="nb">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="n">time</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">HumStatus2</span> <span class="p">=</span> <span class="n">Hum2</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Node2Data</span> <span class="p">=</span> <span class="n">table</span><span class="p">(</span><span class="n">time</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">Hum2</span><span class="o">&#39;</span><span class="p">,</span> <span class="n">HumStatus2</span><span class="o">&#39;</span><span class="p">,</span> <span class="c">...</span>
+</span></span><span class="line"><span class="cl">    <span class="s">&#39;VariableNames&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;Time&#39;</span><span class="p">,</span> <span class="s">&#39;Humidity&#39;</span><span class="p">,</span> <span class="s">&#39;HumStatus&#39;</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="n">writetable</span><span class="p">(</span><span class="n">Node2Data</span><span class="p">,</span> <span class="s">&#39;Node2.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">% Cloud observer reads aggregated data and checks alerts</span>
+</span></span><span class="line"><span class="cl"><span class="n">Node1</span> <span class="p">=</span> <span class="n">readtable</span><span class="p">(</span><span class="s">&#39;Node1.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">Node2</span> <span class="p">=</span> <span class="n">readtable</span><span class="p">(</span><span class="s">&#39;Node2.xlsx&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">any</span><span class="p">(</span><span class="n">Node1</span><span class="p">.</span><span class="n">TempStatus</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;High Temp&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">any</span><span class="p">(</span><span class="n">Node2</span><span class="p">.</span><span class="n">HumStatus</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">disp</span><span class="p">(</span><span class="s">&#39;Node2 Alert: High Humidity&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><p>Each node writes its own data file (simulating cloud upload). The observer node
+reads both and evaluates alerts independently — no direct communication between
+Node 1 and Node 2.</p>
+<hr>
+<p><em>Previous: <a href="/courses/iot/posts/ch1-part9-iot-level3">Chapter 1, Part 9 – IoT Level-3</a></em>
+<em>Next: <a href="/courses/iot/posts/ch1-part11-iot-level5">Chapter 1, Part 11 – IoT Level-5</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

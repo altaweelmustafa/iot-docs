@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 3 – REST Caching · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 3 – REST Caching</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-api-caching">What Is API Caching?</a></li>
+    <li><a href="#client-side-caching">Client-Side Caching</a></li>
+    <li><a href="#server-side-caching">Server-Side Caching</a></li>
+    <li><a href="#client-side-vs-server-side-caching">Client-Side vs Server-Side Caching</a></li>
+    <li><a href="#why-caching-matters-in-iot">Why Caching Matters in IoT</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-api-caching">What Is API Caching?</h2>
+<blockquote>
+<p>Caching in the REST communication model means storing a copy of a response at
+some intermediate point — client or server side — so that repeated requests for
+the same resource do not require a full round trip to the origin server.</p>
+</blockquote>
+<p>Caching is one of REST&rsquo;s core performance advantages. It reduces latency, lowers
+server load, and makes applications more responsive under repeated or concurrent
+requests.</p>
+<hr>
+<h2 id="client-side-caching">Client-Side Caching</h2>
+<blockquote>
+<p>Client-side caching occurs on the user&rsquo;s device — a web browser, mobile app, or
+IoT gateway — and is controlled by HTTP caching headers.</p>
+</blockquote>
+<p>How it works:</p>
+<ol>
+<li>The server includes caching headers (<code>Cache-Control</code>, <code>Expires</code>) in its HTTP
+response, specifying how long the response should be considered fresh.</li>
+<li>The client stores the response locally.</li>
+<li>When the same resource is needed again, the client checks its local cache first.</li>
+<li>If the cached copy is still valid, it is reused — no new request is sent.</li>
+</ol>
+<p><strong>Examples:</strong> Web browsers caching HTML pages, CSS files, JavaScript, and images to
+speed up page load times and reduce bandwidth usage.</p>
+<hr>
+<h2 id="server-side-caching">Server-Side Caching</h2>
+<blockquote>
+<p>Server-side caching occurs on the server itself or on intermediary proxy servers,
+and is controlled by the server through HTTP response headers.</p>
+</blockquote>
+<p>How it works:</p>
+<ol>
+<li>The server sets <code>Cache-Control</code> and <code>Expires</code> headers in its responses.</li>
+<li>Clients and intermediary proxies read these headers and cache the responses
+accordingly.</li>
+<li>Subsequent requests for the same resource can be served from the proxy cache
+without reaching the origin server.</li>
+</ol>
+<p><strong>Examples:</strong> Servers caching the results of database queries, computed API
+responses, or dynamic data that is expensive to regenerate on every request.</p>
+<hr>
+<h2 id="client-side-vs-server-side-caching">Client-Side vs Server-Side Caching</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>Client-Side</th>
+          <th>Server-Side</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Location</strong></td>
+          <td>User&rsquo;s device (browser, app)</td>
+          <td>Origin server or proxy</td>
+      </tr>
+      <tr>
+          <td><strong>Control</strong></td>
+          <td>Client, guided by server headers</td>
+          <td>Server</td>
+      </tr>
+      <tr>
+          <td><strong>Purpose</strong></td>
+          <td>Reduce repeated fetches for the same resource</td>
+          <td>Reduce redundant server processing</td>
+      </tr>
+      <tr>
+          <td><strong>Headers used</strong></td>
+          <td><code>Cache-Control</code>, <code>Expires</code></td>
+          <td><code>Cache-Control</code>, <code>Expires</code> (set by server)</td>
+      </tr>
+      <tr>
+          <td><strong>Examples</strong></td>
+          <td>Browser cache (HTML, CSS, JS, images)</td>
+          <td>Cached DB queries, computed API responses</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="why-caching-matters-in-iot">Why Caching Matters in IoT</h2>
+<p>IoT deployments often involve many devices polling the same endpoints repeatedly —
+sensor status checks, configuration reads, firmware version queries. Without
+caching:</p>
+<ul>
+<li>The server receives hundreds or thousands of identical requests per minute.</li>
+<li>Response time degrades under load.</li>
+<li>Bandwidth and processing resources are wasted on redundant work.</li>
+</ul>
+<p>With caching, a single computed response is served to many clients without
+repeating the underlying work.</p>
+<hr>
+<p><em>Previous: <a href="/courses/iot/posts/ch1-part2-rest-api">Chapter 1, Part 2 – REST APIs</a></em>
+<em>Next: <a href="/courses/iot/posts/ch1-part4-proxy-servers">Chapter 1, Part 4 – Proxy Servers</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

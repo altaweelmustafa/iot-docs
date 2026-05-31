@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 2 – Energy Waste in IoT · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<h2>Chapter 2 – Energy Waste in IoT</h2>
+<p class="subtitle">Offloading, scheduling, load balancing, routing, RPL protocol, and AI-enhanced RPL.</p>
+
+
+
+
+<div class="sort-bar">
+  <span>Sort by:</span>
+  <button onclick="sortPosts('date-desc')">Date ↓</button>
+  <button onclick="sortPosts('date-asc')">Date ↑</button>
+  <button onclick="sortPosts('name-asc')">Name A–Z</button>
+  <button onclick="sortPosts('name-desc')">Name Z–A</button>
+</div>
+
+<div id="post-list">
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 2, part 6 – ai-enhanced rpl routing">
+    <a href="http://localhost:1313/docs/courses/iot/posts/ch2/ch2-part6-ai-rpl/">Chapter 2, Part 6 – AI-Enhanced RPL Routing</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">How AI transforms RPL from a static protocol into an adaptive, self-optimizing routing system.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 2, part 5 – rpl protocol">
+    <a href="http://localhost:1313/docs/courses/iot/posts/ch2/ch2-part5-rpl/">Chapter 2, Part 5 – RPL Protocol</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">Deep dive into RPL: DODAG formation, control messages, rank calculation, and storing vs non-storing modes.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 2, part 4 – routing in iot">
+    <a href="http://localhost:1313/docs/courses/iot/posts/ch2/ch2-part4-routing/">Chapter 2, Part 4 – Routing in IoT</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">How IoT routing protocols select paths, reduce energy, and extend network lifetime.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 2, part 3 – load balancing">
+    <a href="http://localhost:1313/docs/courses/iot/posts/ch2/ch2-part3-load-balancing/">Chapter 2, Part 3 – Load Balancing</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">Distributing processing and communication tasks fairly across IoT nodes.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 2, part 2 – scheduling">
+    <a href="http://localhost:1313/docs/courses/iot/posts/ch2/ch2-part2-scheduling/">Chapter 2, Part 2 – Scheduling</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">How poor task scheduling wastes energy in IoT networks.</p>
+  </div>
+  
+  <div class="post-entry"
+    data-date="2026-05-31"
+    data-title="chapter 2, part 1 – energy waste in iot">
+    <a href="http://localhost:1313/docs/courses/iot/posts/ch2/ch2-part1-energy-waste/">Chapter 2, Part 1 – Energy Waste in IoT</a>
+    <span class="post-date">— 2026 May 31</span>
+    <p class="post-desc">Why energy efficiency matters in IoT and the primary causes of energy waste.</p>
+  </div>
+  
+</div>
+
+<script>
+function sortPosts(method) {
+  const list = document.getElementById('post-list');
+  const posts = Array.from(list.querySelectorAll('.post-entry'));
+  posts.sort((a, b) => {
+    if (method === 'date-desc') return b.dataset.date.localeCompare(a.dataset.date);
+    if (method === 'date-asc')  return a.dataset.date.localeCompare(b.dataset.date);
+    if (method === 'name-asc')  return a.dataset.title.localeCompare(b.dataset.title);
+    if (method === 'name-desc') return b.dataset.title.localeCompare(a.dataset.title);
+  });
+  posts.forEach(p => list.appendChild(p));
+}
+</script>
+
+
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

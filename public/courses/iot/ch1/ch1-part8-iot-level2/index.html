@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 8 – IoT Level-2 · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 8 – IoT Level-2</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-iot-level-2">What Is IoT Level-2?</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#application-smart-irrigation">Application: Smart Irrigation</a></li>
+    <li><a href="#advantages-of-smart-irrigation">Advantages of Smart Irrigation</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-iot-level-2">What Is IoT Level-2?</h2>
+<blockquote>
+<p>A Level-2 IoT system has a <strong>single node</strong> that performs sensing and/or
+actuation and <strong>local analysis</strong>. Data is stored in the cloud and the
+application is cloud-based.</p>
+</blockquote>
+<p>The key difference from Level-1: analysis still happens locally on the device, but
+storage moves to the cloud. The application is also cloud-hosted rather than
+running on the device.</p>
+<p><strong>Best for:</strong> Solutions where data volumes are large enough to require cloud
+storage, but the primary analysis logic is simple enough to run on the local node.</p>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Local]                          [Cloud]
+</span></span><span class="line"><span class="cl">                                   App
+</span></span><span class="line"><span class="cl">                                    ▲
+</span></span><span class="line"><span class="cl">REST/WebSocket               REST/WebSocket Communication
+</span></span><span class="line"><span class="cl">Communication                       ▼
+</span></span><span class="line"><span class="cl">     ▼                       REST/WebSocket Services
+</span></span><span class="line"><span class="cl">Controller Service ◄────────────────►
+</span></span><span class="line"><span class="cl">     ▼                                   ▼
+</span></span><span class="line"><span class="cl">  Resource                            Database
+</span></span><span class="line"><span class="cl">     ▼
+</span></span><span class="line"><span class="cl">  Device
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">● Monitoring Node — performs analysis locally
+</span></span><span class="line"><span class="cl">                  ──────────────────────► Cloud Storage
+</span></span></code></pre></div><p>The node does its own analysis. Only the processed or raw data is pushed to cloud
+storage. The cloud application reads from that storage and presents results.</p>
+<hr>
+<h2 id="application-smart-irrigation">Application: Smart Irrigation</h2>
+<p>A smart irrigation system uses soil moisture sensors to determine water content in
+the ground, then controls water flow accordingly.</p>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Soil moisture sensors measure water content continuously.</li>
+<li>The local node compares readings against predefined moisture thresholds.</li>
+<li>If soil is too dry, the valve opens to release water.</li>
+<li>A water schedule can also be configured to control irrigation timing.</li>
+<li>All raw sensor data is stored in the cloud for historical records and reporting.</li>
+</ul>
+<p><strong>Why Level-2:</strong> The analysis logic (compare moisture level to threshold → open/close
+valve) is simple enough to run locally. But the volume of continuous sensor data
+over time is large enough to warrant cloud storage rather than local disk.</p>
+<hr>
+<h2 id="advantages-of-smart-irrigation">Advantages of Smart Irrigation</h2>
+<ul>
+<li>Increases crop productivity through precise watering.</li>
+<li>Reduces water consumption by only irrigating when needed.</li>
+<li>Reduces dependence on manual human intervention.</li>
+<li>Requires minimal water resources compared to scheduled fixed-time irrigation.</li>
+</ul>
+<hr>
+<p><em>Previous: <a href="/courses/iot/ch1/ch1-part7-iot-level1">Chapter 1, Part 7 – IoT Level-1</a></em>
+<em>Next: <a href="/courses/iot/ch1/ch1-part9-iot-level3">Chapter 1, Part 9 – IoT Level-3</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>

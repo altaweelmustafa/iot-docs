@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/docs/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=docs/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1, Part 7 – IoT Level-1 · Docs</title>
+  <link rel="stylesheet" href="/docs/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Docs</a></h1>
+    <nav>
+      <a href="/docs/courses">Courses</a><a href="/docs/books">Books</a><a href="/docs/apis">APIs</a><a href="/docs/about">About</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+<article>
+  <h2 class="post-title">Chapter 1, Part 7 – IoT Level-1</h2>
+  <p class="post-date"><em>posted on 2026 May 31</em></p>
+
+  
+  <nav class="toc">
+    <strong>Contents</strong>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-iot-level-1">What Is IoT Level-1?</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#application-home-automation">Application: Home Automation</a></li>
+    <li><a href="#types-of-home-automation-systems">Types of Home Automation Systems</a></li>
+    <li><a href="#main-wireless-protocols">Main Wireless Protocols</a></li>
+    <li><a href="#advantages">Advantages</a></li>
+    <li><a href="#challenges">Challenges</a></li>
+  </ul>
+</nav>
+  </nav>
+  <hr>
+  
+
+  <h2 id="what-is-iot-level-1">What Is IoT Level-1?</h2>
+<blockquote>
+<p>A Level-1 IoT system has a <strong>single node</strong> that performs sensing and/or
+actuation, stores data locally, performs analysis locally, and hosts the
+application — all on the same device.</p>
+</blockquote>
+<p>No cloud is involved. Everything runs on one controller.</p>
+<p><strong>Best for:</strong> Low-cost, low-complexity solutions where data volumes are small and
+analysis is not computationally intensive.</p>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Local]                          [Cloud]
+</span></span><span class="line"><span class="cl">  App
+</span></span><span class="line"><span class="cl">   ▲
+</span></span><span class="line"><span class="cl">REST/WebSocket Communication
+</span></span><span class="line"><span class="cl">   ▼
+</span></span><span class="line"><span class="cl">REST/WebSocket Services ◄──── Controller Service
+</span></span><span class="line"><span class="cl">        ▲                            ▼
+</span></span><span class="line"><span class="cl">    Database                     Resource
+</span></span><span class="line"><span class="cl">                                     ▼
+</span></span><span class="line"><span class="cl">                                  Device
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">● Monitoring Node — performs analysis and stores data locally
+</span></span></code></pre></div><p>All components reside on the local node. The cloud side is unused at this level.</p>
+<hr>
+<h2 id="application-home-automation">Application: Home Automation</h2>
+<p>Home automation is the canonical Level-1 example.</p>
+<p>All sensors (motion detectors, temperature sensors, door sensors, smoke detectors)
+send data to a single local controller — the node. A mobile app controls everything
+over Ethernet or local wireless signals. All data is stored and processed locally.</p>
+<p><strong>Why it qualifies as Level-1:</strong></p>
+<ul>
+<li>All sensing and data gathering is local — no external network dependency.</li>
+<li>Processing is basic and event-triggered: a motion sensor detects movement and
+triggers a predefined action like turning on a light.</li>
+</ul>
+<hr>
+<h2 id="types-of-home-automation-systems">Types of Home Automation Systems</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Power Line Based</strong></td>
+          <td>Uses existing electrical wiring as the communication medium</td>
+      </tr>
+      <tr>
+          <td><strong>Wired / BUS Cable</strong></td>
+          <td>Dedicated control cables between devices and controller</td>
+      </tr>
+      <tr>
+          <td><strong>Wireless</strong></td>
+          <td>Radio-based communication — no wiring required</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="main-wireless-protocols">Main Wireless Protocols</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Protocol</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Bluetooth</strong></td>
+          <td>Short range, low power</td>
+      </tr>
+      <tr>
+          <td><strong>Zigbee</strong></td>
+          <td>Mesh network, very low power, widely used in smart home</td>
+      </tr>
+      <tr>
+          <td><strong>Z-Wave</strong></td>
+          <td>Sub-GHz frequency, less Wi-Fi interference</td>
+      </tr>
+      <tr>
+          <td><strong>Wi-Fi</strong></td>
+          <td>High bandwidth, higher power consumption</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="advantages">Advantages</h2>
+<ul>
+<li>All devices managed from a single place.</li>
+<li><strong>Autonomy</strong> — continues functioning even when internet connectivity is lost,
+since everything is local.</li>
+<li><strong>Low latency</strong> — local processing means fast decision-making with no cloud
+round-trip delay.</li>
+<li>Easy to add new devices — just join the local network.</li>
+<li>Maximizes home security through local control.</li>
+<li>Remote control of home functions via local network.</li>
+<li>Increased energy efficiency through automated scheduling and control.</li>
+</ul>
+<hr>
+<h2 id="challenges">Challenges</h2>
+<ul>
+<li><strong>Limited scalability</strong> — a single node is the ceiling for compute and storage.</li>
+<li><strong>Limited processing power and storage</strong> — insufficient for large data volumes
+or complex analytics algorithms.</li>
+<li><strong>Single point of failure</strong> — if the node fails, the entire system goes down.</li>
+<li>Access control and data ownership complexity.</li>
+<li>Interoperability issues between devices from different manufacturers.</li>
+<li>High initial investment and technical skill requirements for setup.</li>
+</ul>
+<hr>
+<p><em>Previous: <a href="/courses/iot/posts/ch1-part6-iot-system-components">Chapter 1, Part 6 – IoT System Components</a></em>
+<em>Next: <a href="/courses/iot/posts/ch1-part8-iot-level2">Chapter 1, Part 8 – IoT Level-2</a></em></p>
+
+</article>
+
+  </main>
+
+  <footer>
+    <hr>
+    
+    <p>© 2026 Mustafa and Samaa</p>
+    
+  </footer>
+</body>
+</html>
